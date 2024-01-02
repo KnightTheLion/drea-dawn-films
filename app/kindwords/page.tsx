@@ -58,7 +58,7 @@ const KindWords = () => {
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-deep-green">
-                    Message
+                    <div>Message<span className="italic text-sm"> ( click or tap to read )</span></div>
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-deep-green text-xl p-3">
