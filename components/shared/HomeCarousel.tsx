@@ -22,12 +22,12 @@ const images = [
   {
     src: "/homepage-carousel/family-home-page.webp",
     title: "Remembering that Family is everything.",
-    description: "Styled shoots are some of my favorite photoshoots.",
+    description: "Styled shoots are some of my favorite photoshoots. Make sure to ask about them!",
     number: 2,
   },
   {
     src: "/homepage-carousel/engagement-home-page.webp",
-    title: "Scenic shots make amazing momentos.",
+    title: "Remember that moment that she said YES!",
     description:
       "Posing with loved ones in front of beautiful scenery leaves lasting impressions.",
     number: 3,
@@ -56,7 +56,7 @@ const HomeCarousel = () => {
     <div className="flex flex-col xl:flex-row justify-center items-center">
       <div className="xl:w-[75%]">
         <div className="bg-creamy aspect-video grid grid-rows-2 p-4 gap-3 justify-self-center">
-          <div className="text-2xl md:text-3xl lg:text-4xl text-center text-white pt-8 flex justify-center items-center">
+          <div className="text-2xl md:text-3xl lg:text-3xl text-center text-white pt-8 flex justify-center items-center font-semibold">
             {images[current].title}
           </div>
           <div className="text-md md:text-xl lg:text-2xl text-center text-white md:px-24">
@@ -92,8 +92,9 @@ const HomeCarousel = () => {
                     src={image.src}
                     alt={image.title}
                     width={1000}
-                    height={500}
-                    unoptimized={true}
+                    height={667}
+                    quality={100}
+                   unoptimized={true}
                   />
                 </CarouselItem>
               ))}

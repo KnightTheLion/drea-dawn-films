@@ -102,7 +102,7 @@ export default function Home() {
       {/* */}
       {/* BEGIN SHORT ABOUT ARTIST SECTION..... */}
       <section className="flex-1">
-        <section className="container mt-6">
+        <section className="container mt-6 p-3 md:p-12">
           <div className="mb-6 lg:grid lg:grid-flow-col lg:items-center lg:relative ">
             {/* DECORATIVE LINE FOR ABOUT SECTION */}
             <div className="hidden lg:flex h-full justify-end">
@@ -162,7 +162,7 @@ export default function Home() {
         {/* */}
         {/* */}
         {/* BEGIN LINK TO CONTACT SECTION */}
-        <section className="container mt-6">
+        <section className="container mt-6 px-3 md:px-12">
           <div>
             <h2 className="font-semibold text-deep-green p-2 text-center xl:text-2xl">
               MEMORIES OF LOVE
@@ -190,7 +190,7 @@ export default function Home() {
         {/*.....END LINK TO CONTACT SECTION */}
         {/* */}
         {/* BEGIN SECTION WITH IMAGE CAROUSEL..... */}
-        <section className="xl:p-24 md:p-16 pt-6 container">
+        <section className="px-3 md:px-12 pt-6 container">
           <div>
             <HomeCarousel />
           </div>

@@ -37,6 +37,7 @@ const KindWords = () => {
         <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[220px]">
           Kind Words
         </h1>
+        <p className="text-deep-green text-center py-4 border-b border-deep-green">Thank you to all of these sweet people!</p>
         <div className="pt-4 grid grid-flow-row gap-4 py-6 md:grid md:grid-cols-2 md:justify-center md:items-center">
           {kindWords.map((kindWord) => (
             <div className="">

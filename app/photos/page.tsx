@@ -50,22 +50,28 @@ export default function Photos() {
       {/* .....END OF SIDEBAR */}
       {/* */}
       {/* IMAGE LIST START..... */}
-      <div className="px-2 lg:px-12 mt-[100px] lg:mt-72">
-        <ImageList variant="masonry" cols={numOfCols} gap={numForGap}>
-          {photosPageImages.map((photo, index) => (
-            <ImageListItem key={index}>
-              <Image
-                width={1000}
-                height={1000}
-                alt="photo gallery"
-                src={photo}
-                priority
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </div>
-      {/* .....END OF SIDEBAR */}
+      <section className="my-10">
+        <h1 className="text-center text-3xl md:text-4xl text-deep-green pt-20 lg:pt-[220px]">
+          Drea Dawn Photo + Films
+        </h1>
+        <h2 className='text-center text-xl md:text-3xl text-deep-green'>Photo Gallery</h2>
+        <div className="px-2 pt-8">
+          <ImageList variant="masonry" cols={numOfCols} gap={numForGap}>
+            {photosPageImages.map((photo, index) => (
+              <ImageListItem key={index}>
+                <Image
+                  width={1000}
+                  height={1000}
+                  alt="photo gallery"
+                  src={photo}
+                  priority
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+      </section>
+      {/* .....END OF IMAGE LIST */}
       {/* */}
       {/* FOOTER START..... */}
       <footer className="w-full">
