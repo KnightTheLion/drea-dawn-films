@@ -1,6 +1,9 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 
 export default function Navbar() {
@@ -9,6 +12,8 @@ export default function Navbar() {
     height: 'auto',
     width: 'auto',
   };
+
+  const pathname = usePathname()
   
   return (
     <div className="drop-shadow-2xl">
@@ -16,7 +21,7 @@ export default function Navbar() {
       <div className="py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full items-center px-2 lg:px-6 justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full items-center justify-end order-2 lg:order-1 text-right lg:text-center content">
-            <div><Link href={'/photos'}>PHOTOS</Link></div>
+            <div><Link href={`${pathname === '/' ? '/photos' : '/'}`}>{`${pathname === '/' ? 'PHOTOS' : 'HOME'}`}</Link></div>
             <div><Link href={'/videos'}>VIDEOS</Link></div>
             <div><Link href={'/kindwords'}>KIND WORDS</Link></div>
           </div>
