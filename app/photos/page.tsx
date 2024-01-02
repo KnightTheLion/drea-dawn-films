@@ -20,12 +20,12 @@ export default function Photos() {
   let numOfCols = isExtraLargeSreen
     ? 5
     : isLargeSreen
-    ? 3
-    : isMediumScreen
-    ? 2
-    : isSmallSreen
-    ? 1
-    : 1;
+      ? 3
+      : isMediumScreen
+        ? 2
+        : isSmallSreen
+          ? 1
+          : 1;
   let numForGap = 8;
 
   if (!photosPageImages) {
@@ -89,6 +89,12 @@ export default function Photos() {
             VIDEOS
           </Link>
           <Link
+            href={"/kindwords"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            KIND WORDS
+          </Link>
+          <Link
             href={"/meet"}
             className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
           >
@@ -106,8 +112,8 @@ export default function Photos() {
           <p className="flex gap-2 items-center justify-center">
             {" "}
             <SiMinutemailer />
-            <a href="mailto:dreadawnphotography@gmail.com"> Email</a> |
-            North Carolina
+            <a href="mailto:dreadawnphotography@gmail.com"> Email</a> | North
+            Carolina
           </p>
           <p>United States</p>
         </div>

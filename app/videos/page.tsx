@@ -2,17 +2,6 @@
 import React from "react";
 import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
-import Image from "next/image";
-import videosPageVideos from "./videos";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
 import Link from "next/link";
 import { SiMinutemailer } from "react-icons/si";
 
@@ -60,7 +49,6 @@ export default function Videos() {
         <div className="px-2 lg:px-12 mt-2 lg:mt-72 w-full h-full flex flex-col gap-4 container"></div>
       </section>
       {/* .....END OF VIDEOS */}
-      {/* .....END OF SIDEBAR */}
       {/* */}
       {/* FOOTER START..... */}
       <footer className="w-full mt-auto">
@@ -82,6 +70,12 @@ export default function Videos() {
             className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
           >
             VIDEOS
+          </Link>
+          <Link
+            href={"/kindwords"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            KIND WORDS
           </Link>
           <Link
             href={"/meet"}

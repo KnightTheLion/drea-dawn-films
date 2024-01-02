@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { VscMenu } from "react-icons/vsc";
@@ -6,7 +7,7 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <div className="z-10 min-w-full md:hidden lg:grid-cols-3 grid-cols grid fixed -top-1 backdrop-blur-sm p-2 bg-deep-green">
+    <div className="z-10 min-w-full lg:hidden lg:grid-cols-3 grid-cols grid fixed -top-1 backdrop-blur-sm p-2 bg-deep-green">
       <div className="min-w-full z-[1000] text-deep-green">
         <Sheet>
           <div className="grid grid-cols-3 items-center justify-center">
@@ -41,7 +42,7 @@ const Sidebar = () => {
                 className="bg-deep-green"
               />
             </div>
-            <nav className="flex flex-col text-deep-green text-left text-2xl gap-8">
+            <nav className="flex flex-col text-deep-green text-left text-2xl gap-6">
               <Link
                 href={"/"}
                 className="hover:border hover:border-deep-green p-2"
@@ -59,6 +60,12 @@ const Sidebar = () => {
                 className="hover:border hover:border-deep-green p-2"
               >
                 VIDEOS
+              </Link>
+              <Link
+                href={"/kindwords"}
+                className="hover:border hover:border-deep-green p-2"
+              >
+                KIND WORDS
               </Link>
               <Link
                 href={"/meet"}

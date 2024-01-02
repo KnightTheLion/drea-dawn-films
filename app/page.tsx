@@ -220,6 +220,12 @@ export default function Home() {
             VIDEOS
           </Link>
           <Link
+            href={"/kindwords"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            KIND WORDS
+          </Link>
+          <Link
             href={"/meet"}
             className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
           >
