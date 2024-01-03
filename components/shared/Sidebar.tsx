@@ -33,49 +33,49 @@ const Sidebar = () => {
             <div></div>
           </div>
           <SheetContent>
-            <div className="pb-12 p-2">
+            <div className="pb-10">
               <Image
                 src={"/header-logo.svg"}
-                width={100}
-                height={100}
+                width={70}
+                height={70}
                 alt="logo"
                 className="bg-deep-green"
               />
             </div>
-            <nav className="flex flex-col text-deep-green text-left text-2xl gap-6">
+            <nav className="flex flex-col text-deep-green text-left text-2xl gap-4">
               <Link
                 href={"/"}
-                className="hover:border hover:border-deep-green p-2"
+                className="hover:border hover:border-deep-green py-2"
               >
                 HOME
               </Link>
               <Link
                 href={"/photos"}
-                className="hover:border hover:border-deep-green p-2"
+                className="hover:border hover:border-deep-green py-2"
               >
                 PHOTOS
               </Link>
               <Link
                 href={"/videos"}
-                className="hover:border hover:border-deep-green p-2"
+                className="hover:border hover:border-deep-green py-2"
               >
                 VIDEOS
               </Link>
               <Link
                 href={"/kindwords"}
-                className="hover:border hover:border-deep-green p-2"
+                className="hover:border hover:border-deep-green py-2"
               >
                 KIND WORDS
               </Link>
               <Link
                 href={"/meet"}
-                className="hover:border hover:border-deep-green p-2"
+                className="hover:border hover:border-deep-green py-2"
               >
                 MEET THE ARTIST
               </Link>
               <Link
                 href={"/contact"}
-                className="hover:border hover:border-deep-green p-2"
+                className="hover:border hover:border-deep-green py-2"
               >
                 CONTACT
               </Link>

@@ -61,7 +61,7 @@ const KindWords = () => {
                     <div>Message<span className="italic text-sm"> ( click or tap to read )</span></div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-deep-green text-xl p-3">
+                    <p className="text-deep-green text-lg p-3">
                       {kindWord.message}
                     </p>
                     <p className="text-deep-green text-lg text-center p-2 italic">

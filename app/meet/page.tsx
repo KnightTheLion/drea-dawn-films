@@ -1,9 +1,183 @@
-import React from 'react'
+'use client'
+import Navbar from "@/components/shared/Navbar";
+import Sidebar from "@/components/shared/Sidebar";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { SiMinutemailer } from "react-icons/si";
+import { useTheme } from "@mui/material/styles";
+import { ImageList, ImageListItem, useMediaQuery } from "@mui/material";
+import familyImages from "./family";
 
 const Meet = () => {
-  return (
-    <div className='text-center pt-12'>Meet the Artist Page Under Construction</div>
-  )
-}
+  const theme = useTheme();
+  const isSmallSreen = useMediaQuery(theme.breakpoints.up("sm"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+  const isLargeSreen = useMediaQuery(theme.breakpoints.up("lg"));
+  const isExtraLargeSreen = useMediaQuery(theme.breakpoints.up("xl"));
 
-export default Meet
+  let numOfCols = isExtraLargeSreen
+    ? 4
+    : isLargeSreen
+      ? 3
+      : isMediumScreen
+        ? 3
+        : isSmallSreen
+          ? 2
+          : 2;
+  let numForGap = 8;
+
+
+  return (
+    <main className="bg-white">
+      {/* */}
+      {/* HEADER START..... */}
+      <header className="z-10 min-w-full lg:grid lg:grid-cols-3 grid-cols relative hidden">
+        <div className="md:absolute min-w-full z-[1000] bg-header-bg">
+          <Navbar />
+        </div>
+      </header>
+      {/* .....END OF HEADER */}
+      {/* */}
+      {/* SIDEBAR START..... */}
+      <div>
+        <Sidebar />
+      </div>
+      {/* .....END OF SIDEBAR */}
+      {/* */}
+      {/* MEET THE ARTIST START..... */}
+      <section className="my-10 container p-3 md:p-6">
+        <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[220px]">
+          Meet the Artist
+        </h1>
+        <p className="text-deep-green text-center py-4 border-b border-deep-green">
+          Get to know Drea Dawn Photography & Films
+        </p>
+        <div className="pt-4 py-6 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center gap-4 text-deep-green text-left p-2 md:max-w-[50%]">
+            <div className="w-full bg-header-bg">
+              <Image
+                src={"/drea-header-img.webp"}
+                width={1238}
+                height={1501}
+                alt="artist"
+                priority={true}
+                unoptimized={true}
+              />
+            </div>
+            <p>
+              Hi! I'm Andrea, mainly known by "Drea" (Dree-Uh). I am a 28 year
+              old wife, mother, entrepreneur, and follower of Jesus.
+            </p>
+            <p>
+              I am a LEO wife, married to a wonderful man. We got married July
+              14, 2016 and let me tell you- Marriage is an adventure! But I
+              wouldn't trade it for anything. We are parents to our two
+              beautiful daughters Mae Valentine and Knightly Dawn, and dog
+              parents to two German shepherds, Zeke & Nala.
+            </p>
+            <p>
+              Why did I choose to become a photographer? That's an easy
+              question. I come from a family line based off of entrepreneurs. My
+              dad, a successful business owner of Champion Tile, was raised
+              under being a third generation tradesmen, he was trained under the
+              eye of his Amish grandpa.
+            </p>
+            <p>
+              As a little girl I always had a love for art, and giving that art
+              to people. I never knew I could do it as a full time job!? I’m
+              also a people lover, so once we connect, you will become my
+              instant friend! This line of work is especially great for me,
+              since I am able to work from home and raise my little Mae.
+            </p>
+            <p>
+              I specialize in wedding photography/ videography but, If you are
+              planning to elope, then by all means ELOPE!! There is nothing more
+              romantic and intimate than saying your forever vows to your
+              significant other on top of a sunset mountain. AH! Spend all that
+              wedding money on your honeymoon and the right people to document
+              your day! That's where I'd come in &#x1F609;
+            </p>
+            <p></p>
+          </div>
+        </div>
+      </section>
+      {/*.......END MEET THE ARTIST */}
+      {/* */}
+      {/* ARTIST FAMILY START..... */}
+      <section className="my-10 container p-3 md:p-6">
+        <p className="text-deep-green text-center">Scroll down to see my little family!</p>
+      <div className="px-2 pt-8">
+          <ImageList variant="masonry" cols={numOfCols} gap={numForGap}>
+            {familyImages.map((photo, index) => (
+              <ImageListItem key={index}>
+                <Image
+                  width={640}
+                  height={1000}
+                  alt="pictures of family"
+                  src={photo}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+      </section>
+      {/*.......END ARTIST FAMILY */}
+      {/* */}
+      {/* FOOTER START..... */}
+      <footer className="w-full mt-auto">
+        <div className="grid grid-flow-row gap-2 p-4 h-fit relative w-fit items-center mx-auto">
+          <Link
+            href={"/"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            HOME
+          </Link>
+          <Link
+            href={"/photos"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            PHOTOS
+          </Link>
+          <Link
+            href={"/videos"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            VIDEOS
+          </Link>
+          <Link
+            href={"/kindwords"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            KIND WORDS
+          </Link>
+          <Link
+            href={"/meet"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            MEET THE ARTIST
+          </Link>
+          <Link
+            href={"/contact"}
+            className="text-deep-green text-center p-2 hover:bg-deep-green hover:text-white"
+          >
+            CONTACT
+          </Link>
+        </div>
+        <div className="bg-deep-green grid grid-flow-row text-center gap-2 text-xs p-4">
+          <p>&copy; 2023 by Drea Dawn Photo & Films</p>
+          <p className="flex gap-2 items-center justify-center">
+            {" "}
+            <SiMinutemailer />
+            <a href="mailto:dreadawnphotography@gmail.com"> Email</a> | North
+            Carolina
+          </p>
+          <p>United States</p>
+        </div>
+      </footer>
+      {/* .....END OF FOOTER */}
+    </main>
+  );
+};
+
+export default Meet;

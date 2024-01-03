@@ -28,10 +28,6 @@ export default function Photos() {
           : 1;
   let numForGap = 8;
 
-  if (!photosPageImages) {
-    return <h1>Loading...</h1>;
-  }
-
   return (
     <main className="bg-white min-h-screen flex flex-col">
       {/* */}
@@ -50,11 +46,13 @@ export default function Photos() {
       {/* .....END OF SIDEBAR */}
       {/* */}
       {/* IMAGE LIST START..... */}
-      <section className="my-10">
-        <h1 className="text-center text-3xl md:text-4xl text-deep-green pt-20 lg:pt-[220px]">
-          Drea Dawn Photo + Films
+      <section className="my-10 container p-2">
+        <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[220px]">
+          Photo Gallery
         </h1>
-        <h2 className='text-center text-xl md:text-3xl text-deep-green'>Photo Gallery</h2>
+        <p className="text-deep-green text-center py-4 border-b border-deep-green">
+          Scroll through some of my favorite photos!
+        </p>
         <div className="px-2 pt-8">
           <ImageList variant="masonry" cols={numOfCols} gap={numForGap}>
             {photosPageImages.map((photo, index) => (
