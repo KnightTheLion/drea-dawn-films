@@ -1,34 +1,13 @@
-"use client";
 import React from "react";
 import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
+import VideoPlayer from "@/components/shared/VideoPlayer";
 import Link from "next/link";
 import { SiMinutemailer } from "react-icons/si";
 
 export default function Videos() {
-  //   const theme = useTheme();
-  //   const isSmallSreen = useMediaQuery(theme.breakpoints.up("sm"));
-  //   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
-  //   const isLargeSreen = useMediaQuery(theme.breakpoints.up("lg"));
-  //   const isExtraLargeSreen = useMediaQuery(theme.breakpoints.up("xl"));
-
-  //   let numOfCols = isExtraLargeSreen
-  //     /? 5
-  //     : isLargeSreen
-  //     /? 3
-  //     : isMediumScreen
-  //     /? 2
-  //     : isSmallSreen
-  //     /? 1
-  //     : 1;
-  //   let numForGap = 8;
-
-  //   if (!photosPageImages) {
-  //     return <h1>Loading...</h1>;
-  //   }
-
   return (
-    <main className="min-h-screen flex flex-col bg-white">
+    <main className="flex flex-col bg-white">
       {/* */}
       {/* HEADER START..... */}
       <header className="z-10 min-w-full lg:grid lg:grid-cols-3 grid-cols relative hidden">
@@ -45,13 +24,22 @@ export default function Videos() {
       {/* .....END OF SIDEBAR */}
       {/* */}
       {/* VIDEOS START..... */}
-      <section className="flex-1">
-        <div className="px-2 lg:px-12 mt-2 lg:mt-72 w-full h-full flex flex-col gap-4 container"></div>
+      <section className="my-10 container p-2 grow">
+        <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[220px]">
+          Video Gallery
+        </h1>
+        <p className="text-deep-green text-center py-4 border-b border-deep-green">
+          Browse through some of my video work!
+        </p>
+        <div>
+          <VideoPlayer />
+        </div>
       </section>
+
       {/* .....END OF VIDEOS */}
       {/* */}
       {/* FOOTER START..... */}
-      <footer className="w-full mt-auto">
+      <footer className="w-full">
         <div className="grid grid-flow-row gap-2 p-4 h-fit relative w-fit items-center mx-auto">
           <Link
             href={"/"}
