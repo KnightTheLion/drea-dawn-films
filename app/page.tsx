@@ -28,30 +28,33 @@ export default function Home() {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          priority
+          //priority
           alt="drea dawn header"
           className="md:hidden"
-          loading="eager"
+          unoptimized={true}
+          loading="lazy"
         />
         <Image
           src={bgMedium}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          priority
+          //priority
           alt="drea dawn header"
           className="hidden md:block xl:hidden"
-          loading="eager"
+          unoptimized={true}
+          loading="lazy"
         />
         <Image
           src={bgLarge}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          priority
+          //priority
           alt="drea dawn header"
           className="hidden xl:block"
-          loading="eager"
+          unoptimized={true}
+          loading="lazy"
         />
         {/* NAVBAR..... */}
         <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
