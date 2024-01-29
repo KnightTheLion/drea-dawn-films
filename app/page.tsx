@@ -31,6 +31,7 @@ export default function Home() {
           priority
           alt="drea dawn header"
           className="md:hidden"
+          loading="eager"
         />
         <Image
           src={bgMedium}
@@ -40,6 +41,7 @@ export default function Home() {
           priority
           alt="drea dawn header"
           className="hidden md:block xl:hidden"
+          loading="eager"
         />
         <Image
           src={bgLarge}
@@ -49,6 +51,7 @@ export default function Home() {
           priority
           alt="drea dawn header"
           className="hidden xl:block"
+          loading="eager"
         />
         {/* NAVBAR..... */}
         <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
