@@ -42,7 +42,10 @@ module.exports = {
         'creamy': '#AE9684'
       },
       backgroundImage: {
-        'header-img': "url('/drea-header-img.webp')"
+        'header-img': "url('/drea-header-large.png')",
+        'header-mobile': "url('/drea-header-mobile.png')",
+        'header-small': "url('/drea-header-small.png')",
+        'header-medium': "url('/drea-header-medium.png')",
       },
       height: {
         'h-header-img': '100%',

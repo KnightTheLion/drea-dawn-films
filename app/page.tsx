@@ -18,10 +18,10 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col">
       {/* */}
       {/* HEADER START..... */}
-      <header className="z-10 min-w-full lg:h-screen xl:h-screen h-max grid lg:grid-cols-3 grid-cols-2 relative bg-header-bg bg-header-img bg-no-repeat bg-left-bottom bg-35vh sm:bg-contain md:bg-contain lg:bg-75vh">
+      <header className="z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg bg-header-mobile md:bg-header-medium xl:bg-header-img bg-left-bottom bg-no-repeat">
         {/* */}
         {/* NAVBAR..... */}
-        <div className="order-2 lg:order-1 lg:absolute min-w-full z-[1000]">
+        <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
           <Navbar />
         </div>
         {/*..... END OF NAVBAR */}
@@ -29,19 +29,19 @@ export default function Home() {
         {/* */}
         {/* */}
         {/* PLACE HOLDER DIV */}
-        <div className="hidden lg:block lg:order-1"></div>
+        <div className="hidden md:block md:order-1"></div>
         {/* .....END OF PLACE HOLDER DIV */}
         {/* */}
         {/* */}
         {/* */}
         {/* ARROW POINT DOWN.....*/}
         <div
-          className=" relative lg:order-1 xl:order-2 flex items-end justify-start xl:justify-center md:justify-end lg:justify-center p-2 md:p-5
+          className=" relative md:order-1 xl:order-2 flex items-end justify-start xl:justify-center md:justify-center lg:justify-center p-2 md:p-5
       
        border-yellow-500 sm:border-red-500 md:border-green-500 lg:border-pink-500 xl:border-orange-500"
         >
           {/* MOBILE SOCIAL LINKS */}
-          <div className="absolute top-6 flex flex-col text-2xl drop-shadow-2xl lg:order-2 xl:order-3 lg:hidden">
+          <div className="absolute top-6 flex flex-col text-2xl drop-shadow-2xl md:order-2 xl:order-3 md:hidden">
             <a target="_blank" href={instagram}>
               <SlSocialInstagram className="mb-4" />
             </a>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           {/*..... END OF MOBILE SOCIAL LINKS */}
           <Image
-            className="w-4 lg:w-6 opacity-60"
+            className="w-4 md:w-6 opacity-60"
             src={"./arrow.svg"}
             width={25}
             height={107.54}
@@ -64,17 +64,17 @@ export default function Home() {
         {/* .....END OF ARROW POINT DOWN*/}
         {/* */}
         {/* SOCIAL LINKS AND WORK DESCRIPTORS .....*/}
-        <div className="z-50 hidden lg:grid grid-rows-4 items-center text-right justify-center relative lg:order-3 xl:order-3">
+        <div className="z-50 hidden md:grid grid-rows-4 items-center text-right justify-center relative md:order-3 xl:order-3">
           {/* PLACE HOLDER DIV .....*/}
-          <div className="lg:order-1 xl:order-1"></div>
+          <div className="md:order-1 xl:order-1"></div>
           {/*..... END OF PLACE HOLDER DIV */}
           {/* */}
           {/* PLACE HOLDER DIV */}
-          <div className="lg:order-4 xl:order-2"></div>
+          <div className="md:order-4 xl:order-2"></div>
           {/* .....END OF PLACE HOLDER DIV */}
           {/* */}
           {/* SOCIAL LINKS .....*/}
-          <div className="lg:flex justify-around text-2xl drop-shadow-2xl lg:order-2 xl:order-3">
+          <div className="md:flex justify-around text-2xl drop-shadow-2xl md:order-2 xl:order-3">
             <a target="_blank" href={instagram}>
               <SlSocialInstagram />
             </a>
@@ -88,7 +88,7 @@ export default function Home() {
           {/* .....END OF SOCIAL LINKS */}
           {/* */}
           {/* WORK DESCRIPTORS .....*/}
-          <div className="p-2 m-4 w-fit border-r-4 opacity-60 lg:order-3 xl:order-4">
+          <div className="p-2 m-4 w-fit border-r-4 opacity-60 md:order-3 xl:order-4">
             <p className="p-2">PHOTOGRAPER</p>
             <p className="p-2">FILMAKER</p>
           </div>

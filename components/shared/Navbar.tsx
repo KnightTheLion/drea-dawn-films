@@ -19,14 +19,14 @@ export default function Navbar() {
     <div className="drop-shadow-2xl">
       {/* LEFT SIDE / 2nd ON MOBILE */}
       <div className="py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full items-center px-2 lg:px-6 justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full items-center justify-end order-2 lg:order-1 text-right lg:text-center content">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full items-center px-2 md:px-6 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full items-center justify-end order-2 md:order-1 text-right md:text-center content">
             <div><Link href={`${pathname !== '/photos' ? '/photos' : '/'}`}>{`${pathname !== '/photos' ? 'PHOTOS' : 'HOME'}`}</Link></div>
             <div><Link href={`${pathname !== '/videos' ? '/videos' : '/'}`}>{`${pathname !== '/videos' ? 'VIDEOS' : 'HOME'}`}</Link></div>
             <div><Link href={`${pathname !== '/kindwords' ? '/kindwords' : '/'}`}>{`${pathname !== '/kindwords' ? 'KIND WORDS' : 'HOME'}`}</Link></div>
           </div>
           {/* MIDDLE / TOP ON MOBILE */}
-          <div className="flex justify-end lg:justify-self-center order-1 lg:order-2 lg:w-fit">
+          <div className="flex justify-end md:justify-self-center order-1 md:order-2 md:w-fit">
           <Link href={'/'}>
             <Image
               src="/header-logo.svg"
@@ -40,7 +40,7 @@ export default function Navbar() {
             </Link>
           </div>
           {/* RIGHT SIDE / BOTTOM ON MOBILE */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:justify-evenly gap-4 w-full items-center order-3 text-right lg:text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:justify-evenly gap-4 w-full items-center order-3 text-right md:text-center">
             <div><Link href={`${pathname !== '/meet' ? '/meet' : '/'}`}>{`${pathname !== '/meet' ? 'MEET THE ARTIST' : 'HOME'}`}</Link></div>
             <div><Link href={`${pathname !== '/contact' ? '/contact' : '/'}`}>{`${pathname !== '/contact' ? 'CONTACT' : 'HOME'}`}</Link></div>
           </div>
