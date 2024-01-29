@@ -31,7 +31,6 @@ export default function Home() {
           //priority
           alt="drea dawn header"
           className="md:hidden"
-          quality={100}
           loading="eager"
         />
         <Image
