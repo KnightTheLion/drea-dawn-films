@@ -31,7 +31,7 @@ export default function Home() {
           //priority
           alt="drea dawn header"
           className="md:hidden"
-          unoptimized={true}
+          quality={100}
           loading="lazy"
         />
         <Image
@@ -42,7 +42,7 @@ export default function Home() {
           //priority
           alt="drea dawn header"
           className="hidden md:block xl:hidden"
-          unoptimized={true}
+          quality={95}
           loading="lazy"
         />
         <Image
@@ -53,7 +53,7 @@ export default function Home() {
           //priority
           alt="drea dawn header"
           className="hidden xl:block"
-          unoptimized={true}
+          quality={100}
           loading="lazy"
         />
         {/* NAVBAR..... */}
