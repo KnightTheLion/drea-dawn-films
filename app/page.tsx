@@ -9,6 +9,10 @@ import {
 } from "react-icons/sl";
 import { SiMinutemailer } from "react-icons/si";
 
+const mobileHeaderImage = `bg-[url(/drea-header-mobile.webp)]`;
+const mediumHeaderImage = `md:bg-[url(/drea-header-medium.webp)]`;
+const largeHeaderImage = `xl:bg-[url(/drea-header-large.webp)]`;
+
 export default function Home() {
   const instagram = "https://www.instagram.com/drea.dawnphoto/?hl=en";
   const facebook = "https://www.facebook.com/dreadawnphotography/";
@@ -18,7 +22,7 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col">
       {/* */}
       {/* HEADER START..... */}
-      <header className="z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg bg-header-mobile md:bg-header-medium xl:bg-header-img bg-left-bottom bg-no-repeat">
+      <header className={`z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg ${mobileHeaderImage} ${mediumHeaderImage} ${largeHeaderImage} bg-left-bottom bg-no-repeat`}>
         {/* */}
         {/* NAVBAR..... */}
         <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
