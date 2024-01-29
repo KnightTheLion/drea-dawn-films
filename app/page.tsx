@@ -8,10 +8,9 @@ import {
   SlSocialFacebook,
 } from "react-icons/sl";
 import { SiMinutemailer } from "react-icons/si";
-
-const mobileHeaderImage = `bg-[url(/drea-header-mobile.webp)]`;
-const mediumHeaderImage = `md:bg-[url(/drea-header-medium.webp)]`;
-const largeHeaderImage = `xl:bg-[url(/drea-header-large.webp)]`;
+import bgMobile from "@/public/drea-header-mobile.webp";
+import bgMedium from "@/public/drea-header-medium.webp";
+import bgLarge from "@/public/drea-header-large.webp";
 
 export default function Home() {
   const instagram = "https://www.instagram.com/drea.dawnphoto/?hl=en";
@@ -22,8 +21,38 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col">
       {/* */}
       {/* HEADER START..... */}
-      <header className={`z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg ${mobileHeaderImage} ${mediumHeaderImage} ${largeHeaderImage} bg-left-bottom bg-no-repeat`}>
+      <header className={`z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg bg-left-bottom bg-no-repeat`}>
         {/* */}
+        <Image
+          src={bgMobile}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+          unoptimized={true}
+          alt="drea dawn header"
+          className="md:hidden"
+        />
+        <Image
+          src={bgMedium}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+          unoptimized={true}
+          alt="drea dawn header"
+          className="hidden md:block xl:hidden"
+        />
+        <Image
+          src={bgLarge}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+          unoptimized={true}
+          alt="drea dawn header"
+          className="hidden xl:block"
+        />
         {/* NAVBAR..... */}
         <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
           <Navbar />

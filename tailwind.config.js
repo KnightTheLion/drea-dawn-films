@@ -41,12 +41,6 @@ module.exports = {
         'card-bg' : '#283029',
         'creamy': '#846F60'
       },
-      backgroundImage: {
-        'header-img': "url('/drea-header-large.webp')",
-        'header-mobile': "url('/drea-header-mobile.webp')",
-        'header-small': "url('/drea-header-small.webp')",
-        'header-medium': "url('/drea-header-medium.webp')",
-      },
       height: {
         'h-header-img': '100%',
         '50vh': '50vh'
