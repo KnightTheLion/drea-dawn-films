@@ -2,11 +2,6 @@ import { url } from "inspector";
 
 const videos = [
   {
-    url: "https://player.vimeo.com/video/386172017",
-    title: "Gatsby Wedding",
-    isPlaying: false
-  },
-  {
     url: "https://player.vimeo.com/video/282712715",
     title: "Marjorie + Nick // Roan Mountain",
     isPlaying: false
