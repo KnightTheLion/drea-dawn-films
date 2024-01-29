@@ -29,6 +29,7 @@ export default function Home() {
           objectFit="cover"
           objectPosition="center"
           //priority
+          quality={100}
           alt="drea dawn header"
           className="md:hidden"
           loading="eager"
