@@ -24,11 +24,12 @@ export default function Home() {
       <header className={`z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg bg-left-bottom bg-no-repeat`}>
         {/* */}
         <Image
-          src={bgMobile}
+          src="https://ik.imagekit.io/ktlwebdev/drea-header-mobile.webp?updatedAt=1706529790541"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
           //priority
+          quality={100}
           alt="drea dawn header"
           className="md:hidden"
           loading="eager"
