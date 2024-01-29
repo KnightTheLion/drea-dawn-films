@@ -29,7 +29,6 @@ export default function Home() {
           objectFit="cover"
           objectPosition="center"
           priority
-          unoptimized={true}
           alt="drea dawn header"
           className="md:hidden"
         />
@@ -39,7 +38,6 @@ export default function Home() {
           objectFit="cover"
           objectPosition="center"
           priority
-          unoptimized={true}
           alt="drea dawn header"
           className="hidden md:block xl:hidden"
         />
@@ -49,7 +47,6 @@ export default function Home() {
           objectFit="cover"
           objectPosition="center"
           priority
-          unoptimized={true}
           alt="drea dawn header"
           className="hidden xl:block"
         />
