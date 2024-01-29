@@ -21,7 +21,7 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col">
       {/* */}
       {/* HEADER START..... */}
-      <header className={`z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg bg-left-bottom bg-no-repeat`}>
+      <header className="z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg">
         {/* */}
         <Image
           src={bgMobile}

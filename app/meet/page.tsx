@@ -57,7 +57,7 @@ const Meet = () => {
           <div className="flex flex-col items-center justify-center gap-4 text-deep-green text-left p-2 md:max-w-[50%]">
             <div className="w-full bg-header-bg">
               <Image
-                src={"/drea-header-img.webp"}
+                src={"/drea-artist-page.webp"}
                 width={1238}
                 height={1501}
                 alt="artist"
