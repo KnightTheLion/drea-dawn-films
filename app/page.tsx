@@ -141,11 +141,12 @@ export default function Home() {
             <div className="md:order-4 relative md:h-2/3">
               <div className="md:absolute -top-1/2 -left-10">
                 <Image
-                  src={"/drea-josh-lake.png"}
+                  src={"/drea-josh-lake.webp"}
                   width={614}
                   height={492}
                   alt="drea and josh at lake"
                   priority
+                  unoptimized={true}
                 />
               </div>
             </div>
