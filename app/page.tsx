@@ -32,7 +32,7 @@ export default function Home() {
           alt="drea dawn header"
           className="md:hidden"
           quality={100}
-          loading="lazy"
+          loading="eager"
         />
         <Image
           src={bgMedium}
@@ -43,7 +43,7 @@ export default function Home() {
           alt="drea dawn header"
           className="hidden md:block xl:hidden"
           quality={95}
-          loading="lazy"
+          loading="eager"
         />
         <Image
           src={bgLarge}
@@ -54,7 +54,7 @@ export default function Home() {
           alt="drea dawn header"
           className="hidden xl:block"
           quality={100}
-          loading="lazy"
+          loading="eager"
         />
         {/* NAVBAR..... */}
         <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
