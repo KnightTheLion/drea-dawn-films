@@ -46,13 +46,13 @@ export default function Home() {
         >
           {/* MOBILE SOCIAL LINKS */}
           <div className="absolute top-6 flex flex-col text-2xl drop-shadow-2xl md:order-2 xl:order-3 md:hidden">
-            <a target="_blank" href={instagram}>
+            <a target="_blank" href={instagram} aria-label="Instagram">
               <SlSocialInstagram className="mb-4" />
             </a>
-            <a target="_blank" href={pintrest}>
+            <a target="_blank" href={pintrest} aria-label="Pinterest">
               <SlSocialPintarest className="mb-4" />
             </a>
-            <a target="_blank" href={facebook}>
+            <a target="_blank" href={facebook} aria-label="Facebook">
               <SlSocialFacebook className="mb-4" />
             </a>
           </div>
@@ -79,13 +79,13 @@ export default function Home() {
           {/* */}
           {/* SOCIAL LINKS .....*/}
           <div className="md:flex justify-around text-2xl drop-shadow-2xl md:order-2 xl:order-3">
-            <a target="_blank" href={instagram}>
+            <a target="_blank" href={instagram} aria-label="Instagram">
               <SlSocialInstagram />
             </a>
-            <a target="_blank" href={pintrest}>
+            <a target="_blank" href={pintrest} aria-label="Pinterest">
               <SlSocialPintarest />
             </a>
-            <a target="_blank" href={facebook}>
+            <a target="_blank" href={facebook} aria-label="Facebook">
               <SlSocialFacebook />
             </a>
           </div>
