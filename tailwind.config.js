@@ -42,10 +42,10 @@ module.exports = {
         'creamy': '#AE9684'
       },
       backgroundImage: {
-        'header-img': "url('/drea-header-large.png')",
-        'header-mobile': "url('/drea-header-mobile.png')",
-        'header-small': "url('/drea-header-small.png')",
-        'header-medium': "url('/drea-header-medium.png')",
+        'header-img': "url('/drea-header-large.webp')",
+        'header-mobile': "url('/drea-header-mobile.webp')",
+        'header-small': "url('/drea-header-small.webp')",
+        'header-medium': "url('/drea-header-medium.webp')",
       },
       height: {
         'h-header-img': '100%',
