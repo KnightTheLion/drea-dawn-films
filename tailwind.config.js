@@ -39,7 +39,7 @@ module.exports = {
       backgroundColor: {
         'header-bg' : '#333D34',
         'card-bg' : '#283029',
-        'creamy': '#AE9684'
+        'creamy': '#846F60'
       },
       backgroundImage: {
         'header-img': "url('/drea-header-large.webp')",
