@@ -31,11 +31,10 @@ export default function Navbar() {
             <Image
               src="/header-logo.svg"
               alt="Drea Dawn Logo"
-              width={130}
-              height={172}
-              unoptimized={true}
+              width={120.82}
+              height={144.79}
               style={logoStyle}
-              priority
+              loading="eager"
             />
             </Link>
           </div>

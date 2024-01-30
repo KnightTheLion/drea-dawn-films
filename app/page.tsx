@@ -8,9 +8,7 @@ import {
   SlSocialFacebook,
 } from "react-icons/sl";
 import { SiMinutemailer } from "react-icons/si";
-import bgMobile from "@/public/drea-header-mobile.webp";
-import bgMedium from "@/public/drea-header-medium.webp";
-import bgLarge from "@/public/drea-header-large.webp";
+import headerImg from "@/public/drea-header.webp";
 
 export default function Home() {
   const instagram = "https://www.instagram.com/drea.dawnphoto/?hl=en";
@@ -23,9 +21,9 @@ export default function Home() {
       {/* HEADER START..... */}
       <header className="z-10 min-w-full md:min-h-[1000px] lg:min-h-[1000px] xl:h-screen grid md:grid-cols-3 grid-cols-2 relative bg-header-bg">
         {/* */}
-        <Image
+        {/* <Image
           src={bgMobile}
-          layout="fill"
+          fill
           objectFit="cover"
           objectPosition="center"
           //priority
@@ -33,28 +31,25 @@ export default function Home() {
           alt="drea dawn header"
           className="md:hidden"
           loading="eager"
-        />
-        <Image
+        /> */}
+        {/* <Image
           src={bgMedium}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
           //priority
           alt="drea dawn header"
-          className="hidden md:block xl:hidden"
+          //className="hidden md:block xl:hidden"
           quality={95}
           loading="eager"
-        />
+        /> */}
         <Image
-          src={bgLarge}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          //priority
-          alt="drea dawn header"
-          className="hidden xl:block"
-          quality={100}
-          loading="eager"
+          src={headerImg}
+          fill
+          className="object-contain object-left"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          priority
+          alt="Picture of the artist"
         />
         {/* NAVBAR..... */}
         <div className="order-2 md:order-1 md:absolute min-w-full z-[1000]">
@@ -92,8 +87,8 @@ export default function Home() {
           <Image
             className="w-4 md:w-6 opacity-60"
             src={"./arrow.svg"}
-            width={25}
-            height={107.54}
+            width={0}
+            height={142.84}
             alt="arrow-down"
           />
         </div>
@@ -165,9 +160,9 @@ export default function Home() {
                 src={"/family.webp"}
                 width={640}
                 height={480}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                 alt="artist family"
-                priority
-                unoptimized={true}
+                quality={100}
               />
             </div>
             <div className="md:order-4 relative md:h-2/3">
@@ -176,9 +171,9 @@ export default function Home() {
                   src={"/drea-josh-lake.webp"}
                   width={614}
                   height={492}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                   alt="drea and josh at lake"
-                  priority
-                  unoptimized={true}
+                  quality={100}
                 />
               </div>
             </div>

@@ -22,7 +22,8 @@ const images = [
   {
     src: "/homepage-carousel/family-home-page.webp",
     title: "Remembering that Family is everything.",
-    description: "Styled shoots are some of my favorite photoshoots. Make sure to ask about them!",
+    description:
+      "Styled shoots are some of my favorite photoshoots. Make sure to ask about them!",
     number: 2,
   },
   {
@@ -93,8 +94,8 @@ const HomeCarousel = () => {
                     alt={image.title}
                     width={1000}
                     height={667}
-                    quality={100}
-                   unoptimized={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+                    loading="lazy"
                   />
                 </CarouselItem>
               ))}
