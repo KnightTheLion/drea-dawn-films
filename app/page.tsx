@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import HomeCarousel from "@/components/shared/HomeCarousel";
-import Footer from "@/components/shared/Footer";
-import Header from "@/components/shared/Header";
 
 export default function Home() {
   return (
-    <section className="flex-1">
-      <section className="container mt-6 p-3 md:p-12">
+    <section className="container p-2 min-h-screen">
+      <section className="mt-6 md:p-12">
         <div className="mb-6 lg:grid lg:grid-flow-col lg:items-center lg:relative ">
           {/* DECORATIVE LINE FOR ABOUT SECTION */}
           <div className="hidden lg:flex h-full justify-end">

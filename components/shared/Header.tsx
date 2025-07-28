@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <div>
-      <Sidebar />
+      {!isHomePage && <Sidebar />}
 
       <header
         className={
