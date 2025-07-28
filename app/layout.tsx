@@ -38,6 +38,7 @@ export const metadata: Metadata = {
         url: "https://dreadawn.com/og-image.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Image of Drea Dawn Photo + Films",
       },
     ],
@@ -47,7 +48,15 @@ export const metadata: Metadata = {
     title: "Drea Dawn Photo + Films",
     description:
       "Wedding and family photography and films in Greensboro and the Triad, North Carolina.",
-    images: ["https://dreadawn.com/og-image.jpg"],
+    images: [
+      {
+        url: "https://dreadawn.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: "Image of Drea Dawn Photo + Films",
+      },
+    ],
   },
 };
 
