@@ -7,6 +7,8 @@ import Footer from "@/components/shared/Footer";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
+const url = "https://dreadawn.com";
+
 export const metadata: Metadata = {
   title: "Drea Dawn Photo + Films",
   description:
@@ -29,14 +31,13 @@ export const metadata: Metadata = {
     title: "Drea Dawn Photo + Films",
     description:
       "Weddings, engagements, family photography and films in the Triad, NC. Capturing unforgettable memories.",
-    url: "https://www.dreadawn.com",
+    url: `${url}`,
     siteName: "Drea Dawn Photo + Films",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://dreadawn.com/og-image.jpg",
-        secureUrl: "https://dreadawn.com/og/og-image.jpg",
+        url: `${url}/og-image.jpg`,
         width: 1200,
         height: 630,
         type: "image/jpeg",
@@ -51,8 +52,7 @@ export const metadata: Metadata = {
       "Wedding and family photography and films in Greensboro and the Triad, North Carolina.",
     images: [
       {
-        url: "https://dreadawn.com/og-image.jpg",
-        secureUrl: "https://dreadawn.com/og/og-image.jpg",
+        url: `${url}/og-image.jpg`,
         width: 1200,
         height: 630,
         type: "image/jpeg",
