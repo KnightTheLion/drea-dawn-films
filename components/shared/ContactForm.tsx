@@ -39,7 +39,7 @@ const ContactForm = () => {
 
     try {
       await sendMail({
-        to: "josh@ktlweb.dev",
+        to: "dreadawnphotography@gmail.com",
         name,
         subject,
         body: `<p>${message}</p>`,

@@ -13,13 +13,13 @@ export async function sendMail({
   subject: string;
   body: string;
 }) {
-  const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
-  console.log(SMTP_EMAIL);
+  const { DD_SMTP_EMAIL, DD_SMTP_PASSWORD } = process.env;
+  console.log(DD_SMTP_EMAIL);
   const transport = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: SMTP_EMAIL,
-      pass: SMTP_PASSWORD,
+      user: DD_SMTP_EMAIL,
+      pass: DD_SMTP_PASSWORD,
     },
   });
   try {
@@ -31,7 +31,7 @@ export async function sendMail({
 
   try {
     await transport.sendMail({
-      from: SMTP_EMAIL,
+      from: DD_SMTP_EMAIL,
       to,
       subject,
       html: body,
