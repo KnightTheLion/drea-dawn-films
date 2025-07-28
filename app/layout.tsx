@@ -7,36 +7,22 @@ import Footer from "@/components/shared/Footer";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
-const url = "https://dreadawn.com";
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dreadawn.com"),
   title: "Drea Dawn Photo + Films",
   description:
     "Drea Dawn Photography and Films is here to capture your most important memories and make them last forever. We specialize in weddings, engagements, and family photography and videography. Based in the Triad, North Carolina.",
-  keywords: [
-    "Photography",
-    "Videography",
-    "Weddings",
-    "Engagements",
-    "Family Pictures",
-    "Portraits",
-    "Senior Photos",
-    "Greensboro",
-    "Asheboro",
-    "Triad",
-    "North Carolina",
-    "NC",
-  ],
-  metadataBase: new URL("https://dreadawn.com"),
   openGraph: {
     title: "Drea Dawn Photo + Films",
     description:
       "Drea Dawn Photography and Films is here to capture your most important memories and make them last forever. We specialize in weddings, engagements, and family photography and videography. Based in the Triad, North Carolina.",
-    url,
+    url: "https://dreadawn.com",
     siteName: "Drea Dawn Photo + Films",
     images: [
       {
-        url: `${url}/opengraph-image.jpg`,
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Drea Dawn Photo + Films — Authentic moments. Cinematic memories.",
       },
     ],
@@ -44,23 +30,28 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
+    card: "summary_large_image",
     title: "Drea Dawn Photo + Films",
     description:
       "Drea Dawn Photography and Films is here to capture your most important memories and make them last forever. We specialize in weddings, engagements, and family photography and videography. Based in the Triad, North Carolina.",
-    card: "summary_large_image",
-    site: "@dreadawn",
-    creator: "@dreadawn",
-    images: [
-      {
-        url: `${url}/twitter-image.jpg`,
-        alt: "Drea Dawn Photo + Films — Authentic moments. Cinematic memories.",
-      },
-    ],
+    images: ["/opengraph-image.jpg"],
   },
-  robots: { index: true, follow: true, nocache: true },
-  viewport: "width=device-width, initial-scale=1",
-};
 
+  keywords: [
+    "North Carolina Wedding Photographer",
+    "Greensboro Wedding Photographer",
+    "Asheboro Wedding Photographer",
+    "Triad Wedding Photographer",
+    "North Carolina Wedding Videographer",
+    "Greensboro Wedding Videographer",
+    "NC Wedding Photography and Videography",
+    "North Carolina Family Photographer",
+    "Asheboro Family Portraits",
+    "North Carolina Portrait Photographer",
+    "Triad Senior Photos",
+    "NC Senior Photos",
+  ],
+};
 export default function RootLayout({
   children,
 }: {
