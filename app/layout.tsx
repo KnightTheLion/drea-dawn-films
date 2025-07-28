@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://dreadawn.com/og-image.jpg",
-        secureUrl: "https://dreadawn.com/og-image.jpg",
+        secureUrl: "https://dreadawn.com/og/og-image.jpg",
         width: 1200,
         height: 630,
         type: "image/jpeg",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://dreadawn.com/og-image.jpg",
-        secureUrl: "https://dreadawn.com/og-image.jpg",
+        secureUrl: "https://dreadawn.com/og/og-image.jpg",
         width: 1200,
         height: 630,
         type: "image/jpeg",
