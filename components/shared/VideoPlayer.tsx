@@ -1,49 +1,70 @@
-"use client";
 import React from "react";
-// import ReactPlayer from 'react-player'
-import dynamic from "next/dynamic";
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-import videos from "@/app/videos/videos";
 
-const VideoPlayer = () => {
+interface Video {
+  name: string;
+  player_embed_url: string;
+  link: string;
+  uri: string;
+  resource_key: string;
+  type: string;
+  isPlaying?: boolean;
+  // Add other properties as needed based on the Vimeo API response
+}
+
+export default async function VideoPlayer() {
+  const data = await fetch(
+    `https://api.vimeo.com/users/${process.env.VIMEO_USER_ID}/albums/${process.env.VIMEO_ALBUM_ID}/videos`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.VIMEO_ACCESS_TOKEN}`,
+      },
+    }
+  );
+  const videos = await data.json();
+  const mainVideo = videos.data[0]; // Assuming the first video is the main one
+  console.log("Main Video:", mainVideo);
   return (
     <div>
       <div className="container p-2">
-      <div className="grid grid-flow-row drop-shadow-xl p-2 rounded-md bg-white">
-          <div className="player-wrapper">
-            <ReactPlayer
-              url="https://player.vimeo.com/video/386172017"
-              title="Gatsby Wedding"
-              className="react-player"
-              playing
-              width="100%"
+        <div className="grid grid-flow-row drop-shadow-xl p-2 rounded-md bg-white">
+          <div className="aspect-video">
+            <iframe
+              key={mainVideo.uri}
+              src={mainVideo.player_embed_url}
+              allow="autoplay; fullscreen; picture-in-picture"
               height="100%"
-              controls
-            />
+              width="100%"
+              title={mainVideo.name}
+              loading="lazy"
+              className="rounded-lg"
+            >
+              Your browser does not support the video tag.
+            </iframe>
           </div>
         </div>
       </div>
-    <div className="w-full h-content grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 container p-2">
-      {videos.map((video, index) => (
-        <div className="grid grid-flow-row drop-shadow-xl p-2 rounded-md bg-white">
-          <div className="text-deep-green py-2 font-bold text-center">{video.title}</div>
-          <div className="player-wrapper">
-            <ReactPlayer
+      <div className="w-full h-content grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 container p-2">
+        {videos.data.map((video: Video, index: number) => {
+          return (
+            <div
+              className="grid grid-flow-row drop-shadow-xl p-2 rounded-md bg-white"
               key={index}
-              url={video.url}
-              title={video.title}
-              className="react-player"
-              playing={video.isPlaying}
-              width="100%"
-              height="100%"
-              controls
-            />
-          </div>
-        </div>
-      ))}
-    </div>
+            >
+              <div className="text-deep-green py-2 font-bold text-center">
+                {video.name}
+              </div>
+              <iframe
+                src={video.player_embed_url}
+                allow="autoplay; fullscreen; picture-in-picture"
+                loading="lazy"
+                title={video.name}
+              >
+                Your browser does not support the video tag.
+              </iframe>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
-};
-
-export default VideoPlayer;
+}

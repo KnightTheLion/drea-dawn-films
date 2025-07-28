@@ -1,9 +1,27 @@
 "use client";
 import React from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { VscMenu } from "react-icons/vsc";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogHeader,
+  DialogDescription,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Button } from "@/components/ui/button";
+import ContactForm from "./ContactForm";
 
 const Sidebar = () => {
   return (
@@ -33,6 +51,14 @@ const Sidebar = () => {
             <div></div>
           </div>
           <SheetContent>
+            <VisuallyHidden asChild>
+              <SheetHeader>
+                <SheetTitle>Navigation</SheetTitle>
+                <SheetDescription>
+                  Navigate through the site using the links below.
+                </SheetDescription>
+              </SheetHeader>
+            </VisuallyHidden>
             <div className="pb-10">
               <Image
                 src={"/header-logo.svg"}
@@ -73,12 +99,25 @@ const Sidebar = () => {
               >
                 MEET THE ARTIST
               </Link>
-              <Link
-                href={"/contact"}
-                className="hover:border hover:border-deep-green py-2"
-              >
-                CONTACT
-              </Link>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="hover:border hover:border-deep-green bg-white text-deep-green text-left text-2xl font-normal flex items-center justify-start h-[48px] p-0 rounded-none">
+                    CONTACT
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <VisuallyHidden asChild>
+                    <DialogHeader>
+                      <DialogTitle>Contact</DialogTitle>
+                      <DialogDescription>
+                        Fill out the form below to get in touch with Drea Dawn
+                        Photo + Films.
+                      </DialogDescription>
+                    </DialogHeader>
+                  </VisuallyHidden>
+                  <ContactForm />
+                </DialogContent>
+              </Dialog>
             </nav>
           </SheetContent>
         </Sheet>
