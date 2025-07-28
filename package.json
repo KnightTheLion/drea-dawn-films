@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "dependencies": {
     "@chakra-ui/react": "^3.22.0",
     "@chakra-ui/toast": "^7.0.2",
