@@ -43,7 +43,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="bg-deep-green grid grid-flow-row text-center gap-2 text-xs p-4">
-        <p>&copy; 2023 by Drea Dawn Photo & Films</p>
+        <p>&copy; 2025 by Drea Dawn Photo & Films</p>
         <p className="flex gap-2 items-center justify-center">
           {" "}
           <SiMinutemailer />

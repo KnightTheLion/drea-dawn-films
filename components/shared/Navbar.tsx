@@ -16,9 +16,10 @@ import ContactForm from "./ContactForm";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
+  const [open, setOpen] = React.useState(false);
   const logoStyle = {
     opacity: "75%",
-    height: "auto",
+    height: "120px",
     width: "auto",
   };
 
@@ -83,7 +84,7 @@ export default function Navbar() {
             >{`
               ${pathname !== "/meet" ? "MEET THE ARTIST" : "HOME"}`}</Link>
           </div>
-          <Dialog>
+          <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
               <Button
                 aria-haspopup="dialog"
@@ -102,7 +103,7 @@ export default function Navbar() {
                   Films.
                 </DialogDescription>
               </DialogHeader>
-              <ContactForm />
+              <ContactForm onSuccess={() => setOpen(false)} />
             </DialogContent>
           </Dialog>
         </nav>

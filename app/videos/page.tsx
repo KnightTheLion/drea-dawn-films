@@ -1,17 +1,21 @@
 import React from "react";
 import VideoPlayer from "@/components/shared/VideoPlayer";
+import Cta from "@/components/shared/Cta";
 
 export default async function Page() {
   return (
-    <section className="my-10 container p-2 grow lg:pt-[210px]">
+    <section className="my-10 container p-2 grow lg:pt-[124px]">
       <h1 className="text-center text-4xl text-deep-green pt-20  lg:hidden">
         Video Gallery
       </h1>
       <p className="text-deep-green text-center py-4 border-b border-deep-green lg:hidden">
-        Browse through some of my video work!
+        Browse through some of my films!
       </p>
       <div>
         <VideoPlayer />
+      </div>
+      <div className="flex flex-col items-center justify-center my-10 p-2">
+        <Cta />
       </div>
     </section>
   );

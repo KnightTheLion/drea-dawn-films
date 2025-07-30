@@ -8,7 +8,11 @@ import { Toaster, toaster } from "@/components/ui/toaster";
 import { Loader2 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-const ContactForm = () => {
+export interface ContactFormProps {
+  onSuccess: () => void;
+}
+
+const ContactForm = ({ onSuccess }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,6 +57,9 @@ const ContactForm = () => {
       });
 
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => {
+        onSuccess();
+      }, 2000);
     } catch (error) {
       console.error("Error sending email:", error);
       toaster.create({
@@ -79,8 +86,8 @@ const ContactForm = () => {
         <Image
           src="/header-logo.svg"
           alt="Drea Dawn Photography logo"
-          width={235}
-          height={55}
+          width={120.82}
+          height={144.79}
         />
       )}
       <div className="p-2">

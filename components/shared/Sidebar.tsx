@@ -11,6 +11,7 @@ import {
 import { VscMenu } from "react-icons/vsc";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import {
   Dialog,
   DialogContent,
@@ -24,10 +25,16 @@ import { Button } from "@/components/ui/button";
 import ContactForm from "./ContactForm";
 
 const Sidebar = () => {
+  const pathname = usePathname();
+  const [open, setOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
     <div className="z-10 min-w-full lg:hidden lg:grid-cols-3 grid-cols grid fixed -top-1 backdrop-blur-sm p-2 bg-deep-green">
       <div className="min-w-full z-[1000] text-deep-green">
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
           <div className="grid grid-cols-3 items-center justify-center">
             <SheetTrigger className="w-fit">
               <div className="flex flex-col justify-center items-center w-fit">
@@ -115,7 +122,7 @@ const Sidebar = () => {
                       </DialogDescription>
                     </DialogHeader>
                   </VisuallyHidden>
-                  <ContactForm />
+                  <ContactForm onSuccess={() => setOpen(false)} />
                 </DialogContent>
               </Dialog>
             </nav>

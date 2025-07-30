@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import HomeCarousel from "@/components/shared/HomeCarousel";
+import Cta from "@/components/shared/Cta";
 
 export default function Home() {
   return (
@@ -100,6 +101,9 @@ export default function Home() {
         </div>
       </section>
       {/* .....END SECTION WITH IMAGE CAROUSEL */}
+      <div className="flex flex-col items-center justify-center my-8 p-2">
+        <Cta />
+      </div>
     </section>
   );
 }

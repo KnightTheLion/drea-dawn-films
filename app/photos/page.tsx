@@ -4,6 +4,7 @@ import Image from "next/image";
 import photosPageImages from "./images";
 import { ImageList, ImageListItem, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import Cta from "@/components/shared/Cta";
 
 export default function Photos() {
   const theme = useTheme();
@@ -25,8 +26,8 @@ export default function Photos() {
   let numForGap = 8;
 
   return (
-    <section className="my-10 container p-2 min-h-screen">
-      <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[220px]">
+    <section className="my-10 container p-3 min-h-screen">
+      <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[140px]">
         Photo Gallery
       </h1>
       <p className="text-deep-green text-center py-4 border-b border-deep-green">
@@ -46,6 +47,9 @@ export default function Photos() {
             </ImageListItem>
           ))}
         </ImageList>
+      </div>
+      <div className="flex flex-col items-center justify-center my-8 p-2">
+        <Cta />
       </div>
     </section>
   );

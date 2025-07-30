@@ -1,9 +1,5 @@
 // "use-client";
-import Navbar from "@/components/shared/Navbar";
-import Sidebar from "@/components/shared/Sidebar";
-import Link from "next/link";
 import React from "react";
-import { SiMinutemailer } from "react-icons/si";
 import kindWords from "./kindwords";
 import Image from "next/image";
 import {
@@ -12,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Cta from "@/components/shared/Cta";
 
 const KindWords = () => {
   return (
@@ -19,12 +16,15 @@ const KindWords = () => {
       <h1 className="text-center text-4xl text-deep-green pt-20 lg:pt-[220px]">
         Kind Words
       </h1>
-      <p className="text-deep-green text-center py-4 border-b border-deep-green">
+      <h2 className="text-center text-2xl py-2 text-deep-green">
+        What Clients Are Saying
+      </h2>
+      <p className="text-deep-green text-center border-b border-deep-green">
         Thank you to all of these sweet people!
       </p>
       <div className="pt-4 grid grid-flow-row gap-4 py-6 md:grid md:grid-cols-2 md:justify-center md:items-center">
         {kindWords.map((kindWord) => (
-          <div className="">
+          <div key={kindWord.name}>
             <div>
               <h2 className="text-deep-green text-center text-2xl font-semibold">
                 {kindWord.name}
@@ -66,6 +66,9 @@ const KindWords = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex flex-col items-center justify-center my-8 p-2">
+        <Cta />
       </div>
     </section>
   );

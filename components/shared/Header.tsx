@@ -62,10 +62,7 @@ export default function Header() {
         {isHomePage && <div className="hidden md:block md:order-1"></div>}
         {/* SOCIAL LINKS & ARROW SVG.....*/}
         {isHomePage && (
-          <div
-            className=" relative md:order-1 xl:order-2 flex items-end justify-start xl:justify-center md:justify-center lg:justify-center p-2 md:p-5
-       border-yellow-500 sm:border-red-500 md:border-green-500 lg:border-pink-500 xl:border-orange-500"
-          >
+          <div className=" relative md:order-1 xl:order-2 flex items-end justify-start xl:justify-center md:justify-center lg:justify-center p-2 md:p-5">
             <div className="absolute top-6 flex flex-col text-2xl drop-shadow-2xl md:order-2 xl:order-3 md:hidden">
               <a
                 target="_blank"
