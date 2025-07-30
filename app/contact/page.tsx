@@ -20,7 +20,7 @@ const ContactPage = () => {
             <p className="pl-3 text-2xl font-bold text-forest-green">
               Contact Us:
             </p>
-            <ContactForm />
+            <ContactForm onSuccess={() => {}} />
           </div>
         </div>
       </section>
